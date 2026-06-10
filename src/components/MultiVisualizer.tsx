@@ -293,7 +293,7 @@ export function MultiVisualizer({ frames, code, fileName = "algorithm.js", algoI
 
         <div className="p-4 border-t border-border bg-[#030712]/30 text-center">
           <span className="text-[9px] font-mono text-muted-foreground/40 uppercase tracking-widest">
-            Alchemy Engine v1.0
+            VisualDSA Engine v1.0
           </span>
         </div>
       </div>

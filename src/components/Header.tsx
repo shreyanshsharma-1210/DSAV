@@ -12,7 +12,7 @@ export function Header() {
             <div className="absolute inset-0 rounded-xl border border-white/20" />
           </div>
           <span className="font-bold tracking-tight text-lg text-foreground font-sans">
-            ALCHEMY{" "}
+            VisualDSA{" "}
             <span className="text-[10px] font-mono tracking-widest text-primary px-1.5 py-0.5 rounded bg-primary/10 border border-primary/20 ml-1">
               ENGINE
             </span>
@@ -69,7 +69,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-[10px] font-mono tracking-wider font-semibold text-primary">
             <span className="size-2 rounded-full bg-primary animate-pulse-soft" />
-            <span className="hidden sm:inline">ALCHEMY CORE ACTIVE</span>
+            <span className="hidden sm:inline">VisualDSA CORE ACTIVE</span>
             <span className="inline sm:hidden">ACTIVE</span>
           </div>
 
