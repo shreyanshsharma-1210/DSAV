@@ -231,14 +231,14 @@ function StatsBar({ state, onReset }: { state: ArenaState; onReset: () => void }
                 dataKey="day"
                 stroke="#475569"
                 fontSize={9}
-                fontClassName="font-mono"
+                className="font-mono"
                 tickLine={false}
                 axisLine={false}
               />
               <YAxis
                 stroke="#475569"
                 fontSize={9}
-                fontClassName="font-mono"
+                className="font-mono"
                 tickLine={false}
                 axisLine={false}
               />

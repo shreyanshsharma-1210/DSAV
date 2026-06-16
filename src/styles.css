@@ -97,7 +97,7 @@
   }
 }
 
-/* === ALCHEMY BRAND SYSTEM: Dark Mode Only === */
+/* === VisualDSA BRAND SYSTEM: Dark Mode Only === */
 :root,
 .light {
   --radius: 1.25rem; /* 20px radius standard */
@@ -112,7 +112,7 @@
   --popover-foreground: #f8fafc;
 
   /* Accent colors */
-  --primary: #c7f464; /* Primary Alchemy Green */
+  --primary: #c7f464; /* Primary VisualDSA Green */
   --primary-foreground: #020617;
   --secondary: #0b1220;
   --secondary-foreground: #f8fafc;

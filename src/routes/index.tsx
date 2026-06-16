@@ -42,7 +42,7 @@ function Home() {
             cy="50"
             r="45"
             fill="none"
-            stroke="url(#alchemy-glow-gradient)"
+            stroke="url(#visualdsa-glow-gradient)"
             strokeWidth="0.5"
             strokeDasharray="5 15"
           />
@@ -51,7 +51,7 @@ function Home() {
             cy="50"
             r="35"
             fill="none"
-            stroke="url(#alchemy-glow-gradient)"
+            stroke="url(#visualdsa-glow-gradient)"
             strokeWidth="0.8"
           />
           <circle
@@ -59,12 +59,12 @@ function Home() {
             cy="50"
             r="25"
             fill="none"
-            stroke="url(#alchemy-glow-gradient)"
+            stroke="url(#visualdsa-glow-gradient)"
             strokeWidth="0.3"
             strokeDasharray="20 4"
           />
           <defs>
-            <linearGradient id="alchemy-glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="visualdsa-glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#C7F464" />
               <stop offset="100%" stopColor="#22D3EE" />
             </linearGradient>
@@ -81,7 +81,7 @@ function Home() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-pulse-soft">
               <span className="size-2 rounded-full bg-primary" />
               <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-primary">
-                ALCHEMY ENGINE V1.0 • RUNNING LIVE
+                VisualDSA ENGINE V1.0 • RUNNING LIVE
               </span>
             </div>
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.95] text-balance">
@@ -89,7 +89,7 @@ function Home() {
               <span className="text-gradient">Master Thinking.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-[52ch] leading-relaxed font-sans">
-              Alchemy is where raw source scripts transform into pure logical understanding. Step
+              VisualDSA is where raw source scripts transform into pure logical understanding. Step
               inside our workspace, control runtime compilation, and watch every swap unfold.
             </p>
             <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
@@ -120,7 +120,7 @@ function Home() {
               </div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground flex items-center gap-1.5">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                bubble_sort.alchemy
+                bubble_sort.visualdsa
               </div>
               <div className="font-mono text-[10px] text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded">
                 STEP 04 / 22
