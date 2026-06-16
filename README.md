@@ -27,19 +27,23 @@ Discover a futuristic dark-mode terminal workspace equipped with glassmorphic ca
 
 ### 🌌 Landing Workspace
 *The portal into VisualDSA, featuring ambient glowing orbs and interactive orbital rings.*
-![Landing Showcase](./Landing.png)
+![Landing Showcase](./Documents/Landing.png)
 
 ### 📈 Gamified Arena Dashboard
 *Track your mastery, streak count, and daily XP progression visualized via Recharts.*
-![Arena Dashboard](./Arena.png)
+![Arena Dashboard](./Documents/Arena.png)
 
 ### 🔬 Interactive Sandbox Engine
 *A Monaco Editor playground where you can write custom JS code, run tests, and generate step-by-step trace frames.*
-![Sandbox Playground](./Sandbox.png)
+![Sandbox Playground](./Documents/Sandbox.png)
 
 ### 📊 Algorithmic Playback
 *Visualize arrays, linked lists, binary trees, and graphs. Scrub, pause, and step through execution lines.*
-![Visualizer Stage](./Inside%20Visualizer.png)
+![Visualizer Stage](./Documents/Inside%20Visualizer.png)
+
+### 📖 Interactive Tutorials
+*Learn data structures step-by-step with guided visual walkthroughs.*
+![Learn Page](./Documents/Learn.png)
 
 </div>
 
@@ -81,6 +85,25 @@ When a user runs custom code in the sandbox, the engine wraps native structures 
 1. Every read (`arr[i]`) and write (`arr[i] = temp`) operation is intercepted.
 2. The proxy logs the memory address, active variables, and current execution line.
 3. This generates a list of `DSFrame` items, which are played back sequentially on the canvas to represent transitions.
+
+### 📊 Design Diagrams & Documentation
+
+For a detailed view of the system design and project reports, refer to the following resources:
+* **System Design Diagrams**:
+  * [Class Diagram](./Documents/Class%20Diagram.jpeg)
+  * [Data Flow Diagram](./Documents/Data%20Flow%20Diagram.jpeg)
+  * [Sequence Diagram](./Documents/Sequence%20Diagram.jpeg)
+  * [State Diagram](./Documents/State%20Diagram.jpeg)
+  * [Use Case Diagram](./Documents/Use%20Case%20Diagram.jpeg)
+* **Project Documentation**:
+  * [Minor 2 Project Report (PDF)](./Documents/Minor%202%20Project%20Report.pdf)
+  * [Research Paper (PDF)](./Documents/G09_Research_Paper.pdf)
+  * [Review Paper (PDF)](./Documents/G09_Review_Paper.pdf)
+  * [Project Synopsis (PDF)](./Documents/G09_Synopsis.pdf)
+* **Presentations**:
+  * [Minor 2 Presentation 1 (PPTX)](./Documents/Minor%202%20Presentation%201.pptx)
+  * [Minor 2 Presentation 2 (PPTX)](./Documents/Minor%202%20Presentation%202.pptx)
+  * [Minor 2 Presentation 3 (PPTX)](./Documents/Minor%202%20Presentation%203.pptx)
 
 ---
 
