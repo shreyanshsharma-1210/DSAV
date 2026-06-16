@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import Editor from "@monaco-editor/react";
+import { useState, lazy, Suspense } from "react";
+const Editor = lazy(() => import("@monaco-editor/react"));
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -1044,27 +1044,33 @@ function LearnPage() {
                 </div>
 
                 <div className="rounded-xl border border-border/40 overflow-hidden bg-black/40">
-                  <Editor
-                    height="280px"
-                    language={codeLang}
-                    theme="vs-dark"
-                    value={activeTopic.codeSnippets[codeLang]}
-                    options={{
-                      readOnly: true,
-                      minimap: { enabled: false },
-                      scrollBeyondLastLine: false,
-                      fontSize: 12,
-                      lineHeight: 20,
-                      fontFamily: "JetBrains Mono, ui-monospace, monospace",
-                      lineNumbers: "on",
-                      scrollbar: {
-                        vertical: "visible",
-                        horizontal: "auto",
-                        verticalScrollbarSize: 6,
-                        horizontalScrollbarSize: 6,
-                      },
-                    }}
-                  />
+                  <Suspense fallback={
+                    <div className="flex h-[280px] w-full items-center justify-center font-mono text-xs text-muted-foreground animate-pulse">
+                      Initializing blueprint code...
+                    </div>
+                  }>
+                    <Editor
+                      height="280px"
+                      language={codeLang}
+                      theme="vs-dark"
+                      value={activeTopic.codeSnippets[codeLang]}
+                      options={{
+                        readOnly: true,
+                        minimap: { enabled: false },
+                        scrollBeyondLastLine: false,
+                        fontSize: 12,
+                        lineHeight: 20,
+                        fontFamily: "JetBrains Mono, ui-monospace, monospace",
+                        lineNumbers: "on",
+                        scrollbar: {
+                          vertical: "visible",
+                          horizontal: "auto",
+                          verticalScrollbarSize: 6,
+                          horizontalScrollbarSize: 6,
+                        },
+                      }}
+                    />
+                  </Suspense>
                 </div>
               </div>
             </div>

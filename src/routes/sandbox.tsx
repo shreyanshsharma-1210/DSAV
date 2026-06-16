@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState, useEffect, useRef } from "react";
-import Editor from "@monaco-editor/react";
+import { useMemo, useState, useEffect, useRef, lazy, Suspense } from "react";
+const Editor = lazy(() => import("@monaco-editor/react"));
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InteractiveCanvasEditor } from "@/components/InteractiveCanvasEditor";
@@ -1994,30 +1994,36 @@ function SandboxPage() {
                   </div>
 
                   <div className="flex-1 bg-[#020617]/40 min-h-[300px]">
-                    <Editor
-                      height="300px"
-                      language={lang}
-                      theme="vs-dark"
-                      value={editorCode}
-                      onChange={(val) => setEditorCode(val ?? "")}
-                      onMount={handleEditorDidMount}
-                      options={{
-                        readOnly: false,
-                        minimap: { enabled: false },
-                        scrollBeyondLastLine: false,
-                        fontSize: 12,
-                        lineHeight: 20,
-                        fontFamily: "JetBrains Mono, ui-monospace, monospace",
-                        lineNumbers: "on",
-                        scrollbar: {
-                          vertical: "visible",
-                          horizontal: "auto",
-                          useShadows: false,
-                          verticalScrollbarSize: 6,
-                          horizontalScrollbarSize: 6,
-                        },
-                      }}
-                    />
+                    <Suspense fallback={
+                      <div className="flex h-[300px] w-full items-center justify-center font-mono text-xs text-muted-foreground animate-pulse">
+                        Initializing code workspace...
+                      </div>
+                    }>
+                      <Editor
+                        height="300px"
+                        language={lang}
+                        theme="vs-dark"
+                        value={editorCode}
+                        onChange={(val) => setEditorCode(val ?? "")}
+                        onMount={handleEditorDidMount}
+                        options={{
+                          readOnly: false,
+                          minimap: { enabled: false },
+                          scrollBeyondLastLine: false,
+                          fontSize: 12,
+                          lineHeight: 20,
+                          fontFamily: "JetBrains Mono, ui-monospace, monospace",
+                          lineNumbers: "on",
+                          scrollbar: {
+                            vertical: "visible",
+                            horizontal: "auto",
+                            useShadows: false,
+                            verticalScrollbarSize: 6,
+                            horizontalScrollbarSize: 6,
+                          },
+                        }}
+                      />
+                    </Suspense>
                   </div>
                 </div>
 

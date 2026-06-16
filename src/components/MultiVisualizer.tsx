@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import Editor from "@monaco-editor/react";
+import { useEffect, useMemo, useRef, useState, lazy, Suspense } from "react";
+const Editor = lazy(() => import("@monaco-editor/react"));
 import type {
   DSFrame,
   ArrayShape,
@@ -139,33 +139,39 @@ export function MultiVisualizer({ frames, code, fileName = "algorithm.js", algoI
         </div>
 
         <div className="flex-1 relative bg-[#020617]/40">
-          <Editor
-            height="100%"
-            language={lang}
-            theme="vs-dark"
-            value={codeString}
-            onMount={handleEditorDidMount}
-            options={{
-              readOnly: true,
-              minimap: { enabled: false },
-              scrollBeyondLastLine: false,
-              fontSize: 12,
-              lineHeight: 20,
-              fontFamily: "JetBrains Mono, ui-monospace, monospace",
-              lineNumbers: "on",
-              renderLineHighlight: "none",
-              scrollbar: {
-                vertical: "visible",
-                horizontal: "auto",
-                useShadows: false,
-                verticalScrollbarSize: 6,
-                horizontalScrollbarSize: 6,
-              },
-              cursorWidth: 0,
-              hideCursorInOverviewRuler: true,
-              contextmenu: false,
-            }}
-          />
+          <Suspense fallback={
+            <div className="flex h-full w-full items-center justify-center font-mono text-xs text-muted-foreground animate-pulse p-4">
+              Initializing code intelligence...
+            </div>
+          }>
+            <Editor
+              height="100%"
+              language={lang}
+              theme="vs-dark"
+              value={codeString}
+              onMount={handleEditorDidMount}
+              options={{
+                readOnly: true,
+                minimap: { enabled: false },
+                scrollBeyondLastLine: false,
+                fontSize: 12,
+                lineHeight: 20,
+                fontFamily: "JetBrains Mono, ui-monospace, monospace",
+                lineNumbers: "on",
+                renderLineHighlight: "none",
+                scrollbar: {
+                  vertical: "visible",
+                  horizontal: "auto",
+                  useShadows: false,
+                  verticalScrollbarSize: 6,
+                  horizontalScrollbarSize: 6,
+                },
+                cursorWidth: 0,
+                hideCursorInOverviewRuler: true,
+                contextmenu: false,
+              }}
+            />
+          </Suspense>
         </div>
       </div>
 
